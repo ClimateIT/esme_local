@@ -1,0 +1,7 @@
+
+site:
+    - machine_name: SDC
+      esme_bucket_cache: /mnt/scratch3/nhannah/esme_bucket_cache
+
+    - machine_name: Gadi
+      esme_bucket_cache: /scratch/ir04/nah599/esme_bucket_cache

@@ -1,0 +1,28 @@
+
+name: {{name}}
+model: WRF-CMAQ
+description: "WRF-CMAQ 2 day forecast using ACCESS-G boundary conditions"
+code_repository_url: git@bitbucket.org:oehcas/wrf-cmaq.git
+code_commit_hash: eb5c3fd31b5328b6866a216cd07eab3c356a93fd
+
+# Setup options
+setup:
+    start_datetime: {{today}}T06
+    run_length_hours: 48
+    forcing_interval_hours: 3
+    setup_script: setup.sh
+
+# Build options
+build:
+    build_script: build.sh
+
+# Runtime options
+run:
+    run_script: run.sh
+    wrf:
+        met_boundary_conditions: ACCESS-G
+
+site:
+    machine_name: {{machine_name}}
+    bucket_url: file://{{esme_bucket_cache}}/
+    base_dir: {{base_dir}}
