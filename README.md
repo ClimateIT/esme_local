@@ -4,11 +4,14 @@ Run Earth System Model runs using esme on the local machine.
 
 ## Install
 
+Please make sure you have a clean shell with no conda/pip environments activated and no modules loaded.
+
 ```
 git clone git@github.com:ClimateIT/esme_local.git
 cd esme_local
 ./install.sh
 ```
+
 
 ## Run an experiment
 
