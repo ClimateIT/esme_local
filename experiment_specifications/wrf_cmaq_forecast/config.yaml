@@ -3,7 +3,7 @@ name: {{name}}
 model: WRF-CMAQ
 description: "WRF-CMAQ 2 day forecast using ACCESS-G boundary conditions"
 code_repository_url: git@bitbucket.org:oehcas/wrf-cmaq.git
-code_commit_hash: e6e716d121d7cd3786b45689d133e9bbaecc4557
+code_commit_hash: f128ed5b05e7a8dca0ea9166c76c6c6856595e3a
 
 # Setup options
 setup:
