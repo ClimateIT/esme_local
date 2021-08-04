@@ -10,7 +10,7 @@ cd esme_local
 ./install.sh
 ```
 
-## Run an experiment
+## Run a Policy Mode experiment
 
 ```
 source activate.sh
@@ -18,4 +18,16 @@ python esme.py create --name pm-04 --template wrf_cmaq_policy_mode
 python esme.py setup --name pm-04
 python esme.py run --name pm-04
 ```
+
+## Run a WRF-CMAQ forecast
+
+The forecast template is currently setup to start at `{{yesterday}}T06` (i.e. yesterday at 6 am UTC).
+
+```
+source activate.sh
+python esme.py create --name forecast-01 --template wrf_cmaq_forecast
+python esme.py setup --name forecast-01
+python esme.py run --name forecast-01
+```
+
 
