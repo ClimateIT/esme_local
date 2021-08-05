@@ -32,4 +32,21 @@ python esme.py setup --name forecast-01
 python esme.py run --name forecast-01
 ```
 
+## Update software
+
+To update ESME:
+
+```
+cd esme_local
+git pull
+source activate.sh
+conda env update --file conda_env.yaml --prune
+```
+
+Then for any (incomplete) experiments that may need new fixes:
+
+```
+cd <exp_id>
+git pull
+```
 
