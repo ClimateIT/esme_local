@@ -49,5 +49,6 @@ Then for any (incomplete) experiments that may need new fixes:
 cd <exp_id>
 git checkout esme-main
 git pull
+git submodule update
 ```
 
