@@ -37,8 +37,9 @@ def guess_machine():
     for h in hostnames:
         if 'gadi' in h:
             return 'Gadi'
-        if 'irsdev' in h:
-            return 'SDC'
+        for part in ['irsdev', 'irsweb']:
+            if part in h:
+                return 'SDC'
 
 
 class Experiment:
