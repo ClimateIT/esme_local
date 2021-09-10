@@ -1,15 +1,15 @@
 
 name: {{name}}
 model: WRF-CMAQ
-description: "WRF-CMAQ base Policy Mode using ERA5 boundary conditions"
+description: "WRF-CMAQ 2 day forecast using ACCESS-G boundary conditions runs on SDC general partition"
 code_repository_url: git@bitbucket.org:oehcas/wrf-cmaq.git
 code_commit_hash: 7bd6f3725dcfb58b0b0d7e2c59f1d8d7af48de87
 
 # Setup options
 setup:
-    start_datetime: 2020-01-01T00
-    run_length_hours: 744
-    forcing_interval_hours: 1
+    start_datetime: 2021-09-06T06
+    run_length_hours: 48
+    forcing_interval_hours: 3
     setup_script: setup.sh
 
 # Build options
@@ -19,19 +19,19 @@ build:
 # Runtime options
 run:
     run_script: run.sh
-    queue_name: CAS
+    queue_name: general
     wrf:
-        met_boundary_conditions: ERA5
-        num_cpus: 108
+        met_boundary_conditions: ACCESS-G
+        num_cpus: 80
     cmaq:
         d01:
-            num_cpus: 108
+            num_cpus: 80
         d02:
-            num_cpus: 72
+            num_cpus: 80
         d03:
-            num_cpus: 108
+            num_cpus: 80
 
 site:
-    machine_name: {{machine_name}}
+    machine_name: SDC
     bucket_url: file://{{esme_bucket_cache}}/
     base_dir: {{base_dir}}
