@@ -30,6 +30,8 @@ run:
             num_cpus: 80
         d03:
             num_cpus: 80
+    mcip:
+        static_grid_dir: {{base_dir}}/input/MCIP_static_grids
 
 site:
     machine_name: SDC
