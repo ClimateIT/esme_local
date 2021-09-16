@@ -261,7 +261,7 @@ class Experiment:
         config, config_file = self.__load_config()
 
         with working_directory(self.path):
-            r = sp.run(['./' + config['run']['run_script']])
+            r = sp.run(['./' + config['run']['run_script']], shell=True)
 
 
 
