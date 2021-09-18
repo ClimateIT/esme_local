@@ -56,5 +56,5 @@ Now re-run `setup` for any (incomplete) experiments that may need new fixes:
 
 ```
 cd esme_local
-python esme.py setup --name forecast-01
+python esme.py setup --name <exp_id>
 ```
