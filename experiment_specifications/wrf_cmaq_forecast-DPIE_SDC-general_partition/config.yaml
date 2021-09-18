@@ -3,7 +3,7 @@ name: {{name}}
 model: WRF-CMAQ
 description: "WRF-CMAQ 2 day forecast using ACCESS-G boundary conditions runs on SDC general partition"
 code_repository_url: git@bitbucket.org:oehcas/wrf-cmaq.git
-code_commit_hash: 9a888743ef3d6f403b6097b8ea19b4b20b47af0e
+code_commit_hash: 3cb5770276b545e83bfd29d5ba9803e0dbe6f245
 
 # Setup options
 setup:
@@ -33,7 +33,12 @@ run:
     mcip:
         static_grid_dir: {{base_dir}}/input/MCIP_static_grids
 
+emissions:
+    smoke: 'CSEM'
+
+
 site:
     machine_name: SDC
+    mems_output: /mnt/scratch_lustre/nhannah/workflows/emissions/
     bucket_url: file://{{esme_bucket_cache}}/
     base_dir: {{base_dir}}
