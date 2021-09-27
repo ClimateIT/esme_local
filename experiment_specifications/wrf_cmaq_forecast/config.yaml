@@ -7,7 +7,7 @@ code_commit_hash: 4f179e93f9745d89c53e93df31ab198460117323
 
 # Setup options
 setup:
-    start_datetime: {{yesterday}}T06
+    start_datetime: {{today}}T00
     run_length_hours: 48
     forcing_interval_hours: 3
     setup_script: setup.sh

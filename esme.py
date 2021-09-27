@@ -71,8 +71,8 @@ class Experiment:
 
         with open(input_config) as f:
 
-            today = dt.datetime.today().strftime('%Y-%m-%d')
-            yesterday = (dt.datetime.today() - dt.timedelta(days=1)).strftime('%Y-%m-%d')
+            today = dt.datetime.utcnow().strftime('%Y-%m-%d')
+            yesterday = (dt.datetime.utcnow() - dt.timedelta(days=1)).strftime('%Y-%m-%d')
             base_dir = Path(output_config).parent.resolve()
 
             esme_bucket_cache = None
