@@ -143,12 +143,12 @@ class Experiment:
 
 
 
-    def __populate_w_manifest(self, manifest_yaml, bucket_url):
+    def __populate_w_manifest(self, manifest_yaml, bucket_url, build_name):
 
         # Read, render and write out
         with open(manifest_yaml) as r:
             t = Template(r.read())
-        s = t.render(bucket_url=bucket_url)
+        s = t.render(bucket_url=bucket_url, build_name=build_name)
         # Write out
         with open(manifest_yaml, 'w') as r:
             r.write(s)
@@ -195,7 +195,8 @@ class Experiment:
 
         # Optionally bring in a premade build directory
         build_manifest = self.path / 'build' / 'build_manifest.yaml'
-        self.__populate_w_manifest(build_manifest, config['site']['bucket_url'])
+        self.__populate_w_manifest(build_manifest, config['site']['bucket_url'],
+                                   config['build']['build_name'])
 
         # Bring in the load_env.sh and build.sh for this site:
         machine_name = config['site']['machine_name']
