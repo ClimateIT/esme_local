@@ -3,7 +3,7 @@ name: {{name}}
 model: WRF-CMAQ
 description: "WRF-CMAQ 2 day forecast using ACCESS-G boundary conditions runs on SDC CAS partition"
 code_repository_url: git@bitbucket.org:oehcas/wrf-cmaq.git
-code_commit_hash: 4f179e93f9745d89c53e93df31ab198460117323
+code_commit_hash: 06d89021f32cb214a1fde6c00c095c6fcdf9c074
 
 # Setup options
 setup:
