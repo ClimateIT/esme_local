@@ -191,7 +191,8 @@ class Experiment:
         # Why put them here.
         # Populate the static data directory. We first need to render the manifest.
         input_manifest = self.path / 'input' / 'input_manifest.yaml'
-        self.__populate_w_manifest(input_manifest, config['site']['bucket_url'])
+        self.__populate_w_manifest(input_manifest, config['site']['bucket_url'],
+                                   config['build']['build_name'])
 
         # Optionally bring in a premade build directory
         build_manifest = self.path / 'build' / 'build_manifest.yaml'
