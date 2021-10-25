@@ -3,7 +3,7 @@ name: {{name}}
 model: WRF-CMAQ
 description: "WRF-CMAQ base Policy Mode using ERA5 boundary conditions"
 code_repository_url: git@bitbucket.org:oehcas/wrf-cmaq.git
-code_commit_hash: b560f0415941cb108de2356144908610a5640e42
+code_commit_hash: be4e26befdde360455d0ef78f0b2017566c7dd75
 
 # Setup options
 setup:
