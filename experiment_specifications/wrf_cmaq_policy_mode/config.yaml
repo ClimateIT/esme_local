@@ -3,7 +3,7 @@ name: {{name}}
 model: WRF-CMAQ
 description: "WRF-CMAQ base Policy Mode using ERA5 boundary conditions"
 code_repository_url: git@bitbucket.org:oehcas/wrf-cmaq.git
-code_commit_hash: 479db7c513d8ab2e9c506eea66042a2996387005
+code_commit_hash: b560f0415941cb108de2356144908610a5640e42
 
 # Setup options
 setup:
@@ -32,6 +32,7 @@ run:
         d03:
             num_cpus: 80
 
+        scale_icon_bcon_aerosols: 1.0e-3
 emissions:
     smoke: 'GFAS'
 
