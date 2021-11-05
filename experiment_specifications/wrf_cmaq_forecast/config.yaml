@@ -23,14 +23,14 @@ run:
     queue_name: CAS
     wrf:
         met_boundary_conditions: ACCESS-G
-        num_cpus: 144
+        num_cpus: 108
     cmaq:
         d01:
-            num_cpus: 144
+            num_cpus: 108
         d02:
             num_cpus: 72
         d03:
-            num_cpus: 144
+            num_cpus: 108
 
         scale_icon_bcon_aerosols: 1.0e-3
     mcip:
